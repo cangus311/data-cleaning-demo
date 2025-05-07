@@ -20,4 +20,14 @@ jobs:
           pip install pandas
 
       - name: Run tests
-        run: python test_pipeline.py
+        run: python test_pipeline.py  
+
+      - name: Run pipeline script to generate cleaned CSV
+        run: python pipeline.py
+
+      - name: Upload cleaned CSV as artifact
+        uses: actions/upload/artifact@v4
+        with:
+            name: cleaned-users-csv
+            path: cleaned_sers.csv
+      
