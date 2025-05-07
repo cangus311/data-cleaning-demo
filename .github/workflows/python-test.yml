@@ -29,5 +29,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
             name: cleaned-users-csv
-            path: cleaned_sers.csv
+            path: cleaned_users.csv
       
